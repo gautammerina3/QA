@@ -19,7 +19,7 @@
                             </a>
                             <span class="votes-count fa-sm">10</span>
 
-                            <a title="Mark this answer as best answer " class="vote-accepted mt-2">
+                            <a title="Mark this answer as best answer " class="{{ $answer->status }} mt-2">
                                 <i class="fas fa-check fa-lg"></i>
                             </a>
 
