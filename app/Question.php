@@ -41,7 +41,10 @@ class Question extends Model
         return "unanswered";
     }
 
-  
+    // public function getRouteKeyName()
+    // {
+    //     return 'slug';
+    // }
 
     
 
