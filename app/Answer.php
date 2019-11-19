@@ -69,6 +69,11 @@ class Answer extends Model
         return $this->votes()->wherePivot('vote', -1);
     }
 
+    public function setBodyAttribute($value)
+    {
+        $this->attributes['body'] = clean($value);
+    }
+
 
 }
 
