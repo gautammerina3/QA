@@ -22,7 +22,7 @@
         >
         <i class="far fa-thumbs-up fa-2x"></i>
     </a>
-    <form id="up-vote-{{$formId }}" action="/{{ $formAction }}/vote" method="post" style="display:none;">
+    <form id="up-vote-{{$formId }}" action="/{{ $formAction }}" method="post" style="display:none;">
         @csrf
         <input type="hidden" name="vote" value="1">
     </form>
@@ -33,11 +33,13 @@
         >
         <i class="far fa-thumbs-down fa-2x"></i> 
     </a>
-    <form id="down-vote-{{$formId }}" action="/{{ $formAction }}/vote" method="post" style="display:none;">
+    <form id="down-vote-{{$formId }}" action="/{{ $formAction }}" method="post" style="display:none;">
         @csrf
         <input type="hidden" name="vote" value="-1">
     </form>
     
+
+
     @if ($model instanceof App\Question)
         @include ('shared._favorite', [
             'model' => $model

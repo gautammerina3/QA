@@ -87,7 +87,7 @@ class User extends Authenticatable
     {
         $voteAnswer = $this->voteAnswers();
 
-        $this->_vote($voteAnswer, $answer, $vote);        
+        $this->_vote($voteAnswers, $answer, $vote);        
     }
 
     private function _vote($relationship, $model, $vote)

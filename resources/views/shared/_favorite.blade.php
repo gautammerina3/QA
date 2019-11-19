@@ -9,7 +9,7 @@
 
 <form id="favorite-question-{{ $model->id }}" action="/questions/{{ $model->id }}/favorites" method="post" style="display:none;">
     @csrf
-    @if($question->is_favorited)
+    @if($model->is_favorited)
         @method('DELETE')
     @endif
 </form>
