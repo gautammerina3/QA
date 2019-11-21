@@ -96,4 +96,14 @@ class Question extends Model
         $this->attributes['body'] = clean($value);
     }
 
+    private function bodyHtml()
+    {
+        return \Parsedown::instance()->text($this->body);
+    }
+
+    public function getBodyHtmlAttribute()
+    {
+        return clean($this->bodyHtml());
+    }
+
 }

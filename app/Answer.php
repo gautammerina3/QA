@@ -10,7 +10,7 @@ class Answer extends Model
     
     protected $fillable = ['body', 'user_id'];
 
-    protected $appends = ['created_date'];
+    protected $appends = ['created_date', 'body_html'];
     
     public function question()
     {
@@ -56,25 +56,17 @@ class Answer extends Model
         return $this->id === $this->question->best_answer_id;
     }
 
-    public function votes()
-    {
-        return $this->morphToMany(User::class, 'votable');
-    }
-
-    public function upVotes()
-    {
-        return $this->votes()->wherePivot('vote', 1);
-    }
-
-    public function downVotes()
-    {
-        return $this->votes()->wherePivot('vote', -1);
-    }
-
     public function setBodyAttribute($value)
     {
         $this->attributes['body'] = clean($value);
     }
+
+    public function getBodyHtmlAttribute()
+    {
+        return clean(\Parsedown::instance()->text($this->body));
+    }
+
+    
 
 
 }

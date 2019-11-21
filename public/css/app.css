@@ -11178,3 +11178,7 @@ form.form-delete {
   color: #38c172;
 }
 
+[v-cloak] {
+  display: none;
+}
+
