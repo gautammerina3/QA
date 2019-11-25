@@ -1834,70 +1834,9 @@ module.exports = {
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Answer.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['answer'],
-  data: function data() {
-    return {
-      editing: false,
-      body: this.answer.body,
-      bodyHtml: this.answer.body_html,
-      id: this.answer.id,
-      questionId: this.answer.question_id,
-      beforeEditCache: null
-    };
-  },
-  methods: {
-    edit: function edit() {
-      this.beforeEditCache = this.body;
-      this.editing = true;
-    },
-    cancel: function cancel() {
-      this.body = this.beforeEditCache;
-      this.editing = false;
-    },
-    update: function update() {
-      var _this = this;
-
-      axios.patch(this.endpoint, {
-        body: this.body
-      }).then(function (res) {
-        _this.editing = false;
-        _this.body = res.data.body;
-
-        _this.$toast.success(res.data.message, "Success", {
-          timeout: 3000
-        });
-      })["catch"](function (err) {
-        _this.$toast.error(err.response.data.message, "Error", {
-          timeout: 3000
-        });
-      });
-    },
-    destroy: function destroy() {
-      var _this2 = this;
-
-      if (confirm('Are you sure?')) axios["delete"](this.endpoint).then(function (res) {
-        $(_this2.$el).fadeOut(500, function () {
-          _this2.$toast.success(err.data.message, "Success", {
-            timeout: 3000
-          });
-        });
-      });
-    }
-  },
-  computed: {
-    isInvalid: function isInvalid() {
-      return this.body.length < 10;
-    },
-    endpoint: function endpoint() {
-      return "/questions/".concat(this.questionId, "/answers/").concat(this.id);
-    }
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: F:\\laravel_qa\\resources\\js\\components\\Answer.vue: Unexpected token (68:4)\n\n\u001b[0m \u001b[90m 66 | \u001b[39m            \u001b[0m\n\u001b[0m \u001b[90m 67 | \u001b[39m        }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 69 | \u001b[39m    computed\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 70 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 71 | \u001b[39m        isInvalid() {\u001b[0m\n    at Parser.raise (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:6930:17)\n    at Parser.unexpected (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:8323:16)\n    at Parser.parseExprAtom (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9582:20)\n    at Parser.parseExprSubscripts (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9165:23)\n    at Parser.parseMaybeUnary (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9145:21)\n    at Parser.parseExprOps (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9011:23)\n    at Parser.parseMaybeConditional (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:8984:23)\n    at Parser.parseMaybeAssign (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:8930:21)\n    at Parser.parseExprListItem (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:10252:18)\n    at Parser.parseCallExpressionArguments (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9362:22)\n    at Parser.parseSubscript (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9270:29)\n    at Parser.parseSubscripts (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9186:19)\n    at Parser.parseExprSubscripts (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9175:17)\n    at Parser.parseMaybeUnary (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9145:21)\n    at Parser.parseExprOps (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9011:23)\n    at Parser.parseMaybeConditional (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:8984:23)\n    at Parser.parseMaybeAssign (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:8930:21)\n    at Parser.parseExpression (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:8880:23)\n    at Parser.parseStatementContent (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:10740:23)\n    at Parser.parseStatement (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:10611:17)\n    at Parser.parseBlockOrModuleBlockBody (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:11187:25)\n    at Parser.parseBlockBody (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:11174:10)\n    at Parser.parseBlock (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:11158:10)\n    at Parser.parseFunctionBody (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:10177:24)\n    at Parser.parseFunctionBodyAndFinish (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:10147:10)\n    at Parser.parseMethod (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:10101:10)\n    at Parser.parseObjectMethod (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:10017:19)\n    at Parser.parseObjPropValue (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:10059:23)\n    at Parser.parseObjectMember (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9983:10)\n    at Parser.parseObj (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9903:25)\n    at Parser.parseExprAtom (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9525:28)\n    at Parser.parseExprSubscripts (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9165:23)\n    at Parser.parseMaybeUnary (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9145:21)\n    at Parser.parseExprOps (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:9011:23)\n    at Parser.parseMaybeConditional (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:8984:23)\n    at Parser.parseMaybeAssign (F:\\laravel_qa\\node_modules\\@babel\\parser\\lib\\index.js:8930:21)");
 
 /***/ }),
 
@@ -50174,13 +50113,14 @@ if (token) {
 /*!********************************************!*\
   !*** ./resources/js/components/Answer.vue ***!
   \********************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Answer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Answer.vue?vue&type=script&lang=js& */ "./resources/js/components/Answer.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Answer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Answer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 var render, staticRenderFns
 
 
@@ -50210,7 +50150,7 @@ component.options.__file = "resources/js/components/Answer.vue"
 /*!*********************************************************************!*\
   !*** ./resources/js/components/Answer.vue?vue&type=script&lang=js& ***!
   \*********************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50307,8 +50247,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\Laravel Project\laravel_qa\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\Laravel Project\laravel_qa\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! F:\laravel_qa\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! F:\laravel_qa\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
