@@ -85,5 +85,9 @@ form.form-delete{
       color: $green;
     }
   }
+
+  [v-cloak] {
+    display: none;
+  }
  
 }
